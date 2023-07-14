@@ -1,9 +1,18 @@
-import type { Themes } from '.';
+import {
+  themes,
+  type Themes,
+} from './types';
+
+export const themePrefix = 'theme-variant'
 
 export const themeClassName = <
   Variant extends Themes,
 >(
   variant: Variant,
-): `theme-variant-${Variant}` => (
-  `theme-variant-${variant}`
+): `${typeof themePrefix}-${Variant}` => (
+  `${themePrefix}-${variant}`
+);
+
+export const isTheme = (input: any): input is Themes => (
+  themes.includes(input)
 );

@@ -1,8 +1,12 @@
-import './theme'
+// @ts-check 
 
-/** @type { import('@storybook/react').Preview } */
-const preview = {
-  parameters: {
+import {
+  decorators as themeDecorators,
+  globalTypes as themeGlobalTypes,
+} from './theme'
+
+/** @type { import('@storybook/react').Preview["parameters"] } */
+export const parameters = {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
@@ -10,7 +14,14 @@ const preview = {
         date: /Date$/,
       },
     },
-  },
-};
+  };
 
-export default preview;
+/** @type { import('@storybook/react').Preview["globalTypes"] } */
+export const globalTypes = {
+  ...themeGlobalTypes
+}
+
+/** @type { import('@storybook/react').Preview["decorators"] } */
+export const decorators = [ 
+  ...themeDecorators || [],
+]

@@ -22,6 +22,7 @@
     "build": "storybook build"
   },
   "dependencies": {
+    "@vanilla-extract/css": "^1.12.0",
     "@vanilla-extract/vite-plugin": "^3.8.2",
     "@ws/theme": "workspace:*",
     "vite": "^4.4.4"
