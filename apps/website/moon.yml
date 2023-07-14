@@ -1,0 +1,21 @@
+type: 'application'
+language: 'typescript'
+
+project:
+  name: 'Website'
+  description: 'The webstie itself'
+
+dependsOn:
+  - '@ws/theme'
+  - '@ws/background'
+
+tasks: 
+  build:
+    command: yarn run build
+    inputs: 
+      - '@sources'
+    outputs:
+      - .next
+  start:
+    local: true
+    command: yarn run dev

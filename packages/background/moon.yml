@@ -1,0 +1,9 @@
+type: 'library'
+language: 'typescript'
+
+project:
+  name: "Background component"
+  description: "Render background on server, animate on client"
+
+dependsOn: 
+  - '@ws/theme'

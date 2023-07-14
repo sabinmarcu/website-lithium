@@ -1,0 +1,13 @@
+{
+  "name": "@ws/background",
+  "packageManager": "yarn@3.6.0",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@vanilla-extract/css": "^1.11.1",
+    "@ws/theme": "workspace:*",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18"
+  }
+}

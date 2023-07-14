@@ -1,0 +1,21 @@
+
+type: 'application'
+language: 'typescript'
+
+project:
+  name: 'Storybook'
+  description: 'Design System'
+
+dependsOn:
+  - '@ws/theme'
+
+tasks: 
+  build:
+    command: yarn run build
+    inputs: 
+      - '@sources'
+    outputs:
+      - .next
+  start:
+    local: true
+    command: yarn run start
