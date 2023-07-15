@@ -1,8 +1,8 @@
 import {
-  globalStyle,
-  style,
-} from '@vanilla-extract/css';
-import { theme } from '@ws/theme';
+  frameworkGlobalStyle as globalStyle,
+  frameworkStyle as style,
+  theme,
+} from '@ws/theme';
 
 export const canvasWrapperStyles = style({
   position: 'fixed',

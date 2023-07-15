@@ -13,7 +13,7 @@ export {
 export const theme = { colors };
 export type Theme = typeof theme;
 
-export * from './components';
+export * from './overrides';
 export * from './hooks';
 
 export { runLazy as render } from './utils';

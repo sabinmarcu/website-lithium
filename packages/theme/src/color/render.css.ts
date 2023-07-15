@@ -1,8 +1,6 @@
 import type { GlobalStyleRule } from '@vanilla-extract/css';
 import {
   assignVars,
-  createGlobalTheme,
-  globalStyle,
 } from '@vanilla-extract/css';
 import { colorsContract } from './contract';
 import {
@@ -10,14 +8,16 @@ import {
   themes,
 } from './themes';
 import { themeClassName } from './utils';
+import { frameworkGlobalStyle as globalStyle } from '../overrides';
 
 // Render theme colors to root scope
 for (const [theme, colors] of Object.entries(themes)) {
   // Render theme colors under class and prefers scheme
-  createGlobalTheme(
+  globalStyle(
     `.${themeClassName(theme as any)}`,
-    colorsContract,
-    colors,
+    {
+      vars: assignVars(colorsContract, colors),
+    },
   );
 
   const globalStyles: GlobalStyleRule = {};

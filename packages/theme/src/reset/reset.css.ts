@@ -1,22 +1,13 @@
-import { globalStyle } from '@vanilla-extract/css';
-import { layers } from '../layers';
+import { resetGlobalStyle as globalStyle } from '../overrides';
 
 globalStyle('html, body', {
-  '@layer': {
-    [layers.reset]: {
-      height: '100%',
-    },
-  },
+  height: '100%',
 });
 
 globalStyle('*, *::before, *::after', {
-  '@layer': {
-    [layers.reset]: {
-      boxSizing: 'border-box',
-      WebkitFontSmoothing: 'antialiased',
-      MozOsxFontSmoothing: 'grayscale',
-    },
-  },
+  boxSizing: 'border-box',
+  WebkitFontSmoothing: 'antialiased',
+  MozOsxFontSmoothing: 'grayscale',
 });
 
 globalStyle([
@@ -95,16 +86,12 @@ globalStyle([
   'video',
 ].join(', '),
 {
-  '@layer': {
-    [layers.reset]: {
-      margin: 0,
-      padding: 0,
-      border: 0,
-      fontSize: '100%',
-      font: 'inherit',
-      verticalAlign: 'baseline',
-    },
-  },
+  margin: 0,
+  padding: 0,
+  border: 0,
+  fontSize: '100%',
+  font: 'inherit',
+  verticalAlign: 'baseline',
 });
 
 globalStyle([
@@ -120,35 +107,19 @@ globalStyle([
   'nav',
   'section',
 ].join(', '), {
-  '@layer': {
-    [layers.reset]: {
-      display: 'block',
-    },
-  },
+  display: 'block',
 });
 
 globalStyle('body', {
-  '@layer': {
-    [layers.reset]: {
-      lineHeight: '1',
-    },
-  },
+  lineHeight: '1',
 });
 
 globalStyle('ol, ul', {
-  '@layer': {
-    [layers.reset]: {
-      listStyle: 'none',
-    },
-  },
+  listStyle: 'none',
 });
 
 globalStyle('blockquote, q', {
-  '@layer': {
-    [layers.reset]: {
-      quotes: 'none',
-    },
-  },
+  quotes: 'none',
 });
 
 globalStyle([
@@ -157,18 +128,10 @@ globalStyle([
   'q:before',
   'q:after',
 ].join(', '), {
-  '@layer': {
-    [layers.reset]: {
-      content: ['', 'none'],
-    },
-  },
+  content: ['', 'none'],
 });
 
 globalStyle('table', {
-  '@layer': {
-    [layers.reset]: {
-      borderCollapse: 'collapse',
-      borderSpacing: 0,
-    },
-  },
+  borderCollapse: 'collapse',
+  borderSpacing: 0,
 });
