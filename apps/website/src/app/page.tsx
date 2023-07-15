@@ -1,6 +1,6 @@
 import { Illustration } from './components/illustration';
 
-import * as styles from './styles.css.ts';
+import * as styles from './styles.css';
 
 export default function Home() {
   return (

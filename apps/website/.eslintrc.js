@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    "next/core-web-vitals",
+    "plugin:@next/next/recommended",
     "../../.eslintrc.cjs"
   ]
 }

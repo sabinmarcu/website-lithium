@@ -1,5 +1,7 @@
-import { globalStyle } from '@vanilla-extract/css'
-import { style, theme } from '@ws/theme'
+import { globalStyle } from '@vanilla-extract/css';
+import {
+  theme,
+} from '@ws/theme';
 
 globalStyle('body', {
   display: 'flex',
@@ -13,7 +15,7 @@ globalStyle('body', {
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
-})
+});
 
 globalStyle('main', {
   display: 'flex',
@@ -26,4 +28,4 @@ globalStyle('main', {
   maxWidth: '720px',
   margin: '0 auto',
   overflow: 'hidden',
-})
+});

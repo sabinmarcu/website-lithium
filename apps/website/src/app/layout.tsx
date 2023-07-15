@@ -1,8 +1,8 @@
-import { Background } from '@ws/background'
-import './globalStyle.css'
-import { render } from '@ws/theme'
+import { Background } from '@ws/background';
+import './globalStyle.css';
+import { render } from '@ws/theme';
 
-render()
+render();
 
 export const metadata = {
   title: 'Vanilla Extract + App Directory',
@@ -13,7 +13,7 @@ export const metadata = {
     description: 'React Server Components using Next.js and Vanilla Extract',
   },
   themeColor: '#000',
-}
+};
 
 export default async function RootLayout({
   children,
@@ -27,5 +27,5 @@ export default async function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }

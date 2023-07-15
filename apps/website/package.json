@@ -16,10 +16,11 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^13.4.10",
     "@types/node": "18.15.11",
     "@types/react": "18.0.34",
     "@types/react-dom": "18.0.11",
-    "@vanilla-extract/css": "^1.11.0",
+    "@vanilla-extract/css": "^1.12.0",
     "@vanilla-extract/next-plugin": "^2.1.2",
     "typescript": "5.0.4",
     "webpack": "5.74.0"
