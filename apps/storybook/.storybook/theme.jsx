@@ -16,15 +16,13 @@ export const globalTypes = {
   }
 }
 
+render();
+lazyRender(() => import('./theme.css'))();
 
 /** @type { import('@storybook/react').Decorator } */
 const withThemeProvider = (Story, context) => {
   const body = document.body;
   useTheme(body, context.globals.theme);
-  useEffect(() => {
-    render();
-    lazyRender(() => import('./theme.css'))();
-  }, []);
   return (
     <Story {...context} />
   )
