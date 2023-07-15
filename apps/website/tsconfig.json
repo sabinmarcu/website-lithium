@@ -1,33 +1,20 @@
 {
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "**/*",
+    ".next/types/**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "../../packages/background"
+    },
+    {
+      "path": "../../packages/theme"
+    }
+  ],
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "allowImportingTsExtensions": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "outDir": "../../.moon/cache/types/apps/website",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
       "@ws/background": [
         "../../packages/background/src/index.ts"
       ],
@@ -41,23 +28,15 @@
         "../../packages/theme/src/*"
       ]
     },
-    "outDir": "../../.moon/cache/types/apps/website"
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "noEmit": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
   "exclude": [
     "node_modules"
-  ],
-  "references": [
-    {
-      "path": "../../packages/background"
-    },
-    {
-      "path": "../../packages/theme"
-    }
   ]
 }
