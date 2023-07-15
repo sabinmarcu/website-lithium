@@ -1,5 +1,5 @@
 import { style as originalStyle } from '@vanilla-extract/css';
-import { framework } from '../layers/layers.css';
+import { layers } from '../layers';
 
 type OriginalParameters = Parameters<typeof originalStyle>;
 export const style = (
@@ -7,6 +7,6 @@ export const style = (
   debugId?: OriginalParameters[1],
 ) => originalStyle({
   '@layer': {
-    [framework]: rules as any,
+    [layers.framework]: rules as any,
   },
 }, debugId);
