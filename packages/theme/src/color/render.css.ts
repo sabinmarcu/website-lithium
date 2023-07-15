@@ -15,7 +15,7 @@ import { themeClassName } from './utils';
 for (const [theme, colors] of Object.entries(themes)) {
   // Render theme colors under class and prefers scheme
   createGlobalTheme(
-    `:root.${themeClassName(theme as any)}, .${themeClassName(theme as any)}`,
+    `.${themeClassName(theme as any)}`,
     colorsContract,
     colors,
   );
@@ -23,13 +23,14 @@ for (const [theme, colors] of Object.entries(themes)) {
   const globalStyles: GlobalStyleRule = {};
   // If default theme, also render as default (if no prefers scheme present)
   if (theme === defaultTheme) {
-    createGlobalTheme(':root', colorsContract, colors);
     globalStyles.vars = assignVars(colorsContract, colors);
   }
+
+  const prefersQuery = `(prefers-color-scheme: ${theme})`;
   globalStyle(':root', {
     ...globalStyles,
     '@media': {
-      '(prefers-color-scheme: light)': {
+      [prefersQuery]: {
         vars: assignVars(colorsContract, colors),
       },
     },

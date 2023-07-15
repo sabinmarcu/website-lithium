@@ -1,1 +1,4 @@
-import './reset.css';
+import { lazy } from '../utils';
+
+// @ts-ignore
+lazy(() => import('./reset.css'));

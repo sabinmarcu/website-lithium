@@ -1,5 +1,8 @@
 import { Background } from '@ws/background'
 import './globalStyle.css'
+import { render } from '@ws/theme'
+
+render()
 
 export const metadata = {
   title: 'Vanilla Extract + App Directory',
@@ -12,7 +15,7 @@ export const metadata = {
   themeColor: '#000',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode

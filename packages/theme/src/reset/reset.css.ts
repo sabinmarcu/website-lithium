@@ -1,13 +1,6 @@
 import { globalStyle } from '@vanilla-extract/css';
 import { layers } from '../layers';
 
-// globalStyle('html, body', {
-//   '@layer': {
-//     [layers.reset]: {
-//       height: '100%',
-//     },
-//   },
-// });
 globalStyle('html, body', {
   '@layer': {
     [layers.reset]: {
@@ -101,18 +94,18 @@ globalStyle([
   'audio',
   'video',
 ].join(', '),
-  {
-    '@layer': {
-      [layers.reset]: {
-        margin: 0,
-        padding: 0,
-        border: 0,
-        fontSize: '100%',
-        font: 'inherit',
-        verticalAlign: 'baseline',
-      },
+{
+  '@layer': {
+    [layers.reset]: {
+      margin: 0,
+      padding: 0,
+      border: 0,
+      fontSize: '100%',
+      font: 'inherit',
+      verticalAlign: 'baseline',
     },
-  });
+  },
+});
 
 globalStyle([
   'article',

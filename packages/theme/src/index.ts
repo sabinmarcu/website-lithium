@@ -1,5 +1,7 @@
 import './reset';
-import { colors } from './color';
+import {
+  colors,
+} from './color';
 
 export * from './layers';
 export {
@@ -12,3 +14,5 @@ export type Theme = typeof theme;
 
 export * from './components';
 export * from './hooks';
+
+export { runLazy as render } from './utils';

@@ -1,4 +1,5 @@
-import { useTheme, variants } from '@ws/theme';
+import { render, useTheme, variants } from '@ws/theme';
+import { lazyRender } from '@ws/theme/src/utils';
 import { useEffect } from 'react';
 
 /** @type { import('@storybook/react').Preview["globalTypes"] } */
@@ -15,17 +16,14 @@ export const globalTypes = {
   }
 }
 
-let themeCssImported = false;
 
 /** @type { import('@storybook/react').Decorator } */
 const withThemeProvider = (Story, context) => {
   const body = document.body;
   useTheme(body, context.globals.theme);
   useEffect(() => {
-    if (!themeCssImported) {
-      import('./theme.css')
-      themeCssImported = true;
-    }
+    render();
+    lazyRender(() => import('./theme.css'))();
   }, []);
   return (
     <Story {...context} />
