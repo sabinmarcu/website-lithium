@@ -13,9 +13,13 @@ tasks:
   build:
     command: yarn run build
     inputs: 
-      - '@sources'
+      - '@globs(sources)'
     outputs:
       - storybook-static
   start:
     local: true
     command: yarn run start
+
+workspace:
+  inheritedTasks:
+    include: []

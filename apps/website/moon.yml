@@ -13,9 +13,13 @@ tasks:
   build:
     command: yarn run build
     inputs: 
-      - '@sources'
+      - '@globs(sources)'
     outputs:
       - .next
   start:
     local: true
     command: yarn run dev
+
+workspace:
+  inheritedTasks:
+    include: []

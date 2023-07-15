@@ -1,5 +1,22 @@
+$schema: 'https://moonrepo.dev/schemas/tasks.json'
+
 fileGroups:
   sources: 
     - 'src/**/*'
   tests:
     - 'src/**/*.spec.*'
+
+tasks:
+  lint: 
+    command: 'eslint'
+    type: test
+    inputs: 
+      - '@globs(sources)'
+
+  test: 
+    command: 'jest'
+    type: test
+    args: 
+      - --passWithNoTests
+    inputs: 
+      - '@globs(sources)'

@@ -32,8 +32,8 @@ describe('makeGenerator', () => {
     it('should generate a proper output', () => {
       expect(instance({ primary: toHsl('#0cf') })).toEqual({
         primary: {
-          main: 'hsl(192, 100%, 50%, 100%)',
-          contrast: 'hsl(0, 0%, 0%, 100%)',
+          main: 'hsl(192, 100%, 50%, 1)',
+          contrast: 'hsl(0, 0%, 0%, 1)',
         },
       });
     });

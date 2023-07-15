@@ -2836,17 +2836,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@moonrepo/cli@npm:^1.8.3":
-  version: 1.8.3
-  resolution: "@moonrepo/cli@npm:1.8.3"
+"@moonrepo/cli@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@moonrepo/cli@npm:1.10.1"
   dependencies:
-    "@moonrepo/core-linux-arm64-gnu": ^1.8.3
-    "@moonrepo/core-linux-arm64-musl": ^1.8.3
-    "@moonrepo/core-linux-x64-gnu": ^1.8.3
-    "@moonrepo/core-linux-x64-musl": ^1.8.3
-    "@moonrepo/core-macos-arm64": ^1.8.3
-    "@moonrepo/core-macos-x64": ^1.8.3
-    "@moonrepo/core-windows-x64-msvc": ^1.8.3
+    "@moonrepo/core-linux-arm64-gnu": ^1.10.1
+    "@moonrepo/core-linux-arm64-musl": ^1.10.1
+    "@moonrepo/core-linux-x64-gnu": ^1.10.1
+    "@moonrepo/core-linux-x64-musl": ^1.10.1
+    "@moonrepo/core-macos-arm64": ^1.10.1
+    "@moonrepo/core-macos-x64": ^1.10.1
+    "@moonrepo/core-windows-x64-msvc": ^1.10.1
     detect-libc: ^2.0.1
   dependenciesMeta:
     "@moonrepo/core-linux-arm64-gnu":
@@ -2865,55 +2865,55 @@ __metadata:
       optional: true
   bin:
     moon: moon
-  checksum: bc16fd80e940a2a44e6b95c8f9800260897949b5545334a39dacafb9b64b2f4ea3956865132c50a4fd0f4646776458c3ec5b09f8eb695eb488f7c1c9284d73ae
+  checksum: 1b8928fea9000a8ff07825fb7cdfedd6d4c2cb3cef75f8400d9b377da332a2c349aa89b6ebe58abd9ab2c8cec45dc0f6e2922a2f889b17095f52d8069ae4e26a
   languageName: node
   linkType: hard
 
-"@moonrepo/core-linux-arm64-gnu@npm:^1.8.3":
-  version: 1.8.3
-  resolution: "@moonrepo/core-linux-arm64-gnu@npm:1.8.3"
+"@moonrepo/core-linux-arm64-gnu@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@moonrepo/core-linux-arm64-gnu@npm:1.10.1"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@moonrepo/core-linux-arm64-musl@npm:^1.8.3":
-  version: 1.8.3
-  resolution: "@moonrepo/core-linux-arm64-musl@npm:1.8.3"
+"@moonrepo/core-linux-arm64-musl@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@moonrepo/core-linux-arm64-musl@npm:1.10.1"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@moonrepo/core-linux-x64-gnu@npm:^1.8.3":
-  version: 1.8.3
-  resolution: "@moonrepo/core-linux-x64-gnu@npm:1.8.3"
+"@moonrepo/core-linux-x64-gnu@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@moonrepo/core-linux-x64-gnu@npm:1.10.1"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@moonrepo/core-linux-x64-musl@npm:^1.8.3":
-  version: 1.8.3
-  resolution: "@moonrepo/core-linux-x64-musl@npm:1.8.3"
+"@moonrepo/core-linux-x64-musl@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@moonrepo/core-linux-x64-musl@npm:1.10.1"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@moonrepo/core-macos-arm64@npm:^1.8.3":
-  version: 1.8.3
-  resolution: "@moonrepo/core-macos-arm64@npm:1.8.3"
+"@moonrepo/core-macos-arm64@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@moonrepo/core-macos-arm64@npm:1.10.1"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@moonrepo/core-macos-x64@npm:^1.8.3":
-  version: 1.8.3
-  resolution: "@moonrepo/core-macos-x64@npm:1.8.3"
+"@moonrepo/core-macos-x64@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@moonrepo/core-macos-x64@npm:1.10.1"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@moonrepo/core-windows-x64-msvc@npm:^1.8.3":
-  version: 1.8.3
-  resolution: "@moonrepo/core-windows-x64-msvc@npm:1.8.3"
+"@moonrepo/core-windows-x64-msvc@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@moonrepo/core-windows-x64-msvc@npm:1.10.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -13681,7 +13681,7 @@ __metadata:
   resolution: "website-lithium@workspace:."
   dependencies:
     "@babel/core": ^7.22.5
-    "@moonrepo/cli": ^1.8.3
+    "@moonrepo/cli": ^1.10.1
     "@sabinmarcu/eslint-config": ^1.0.0
     "@styled/typescript-styled-plugin": ^1.0.0
     "@swc/core": ^1.3.69
