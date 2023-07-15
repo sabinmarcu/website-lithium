@@ -15,7 +15,7 @@ tasks:
     inputs: 
       - '@sources'
     outputs:
-      - .next
+      - storybook-static
   start:
     local: true
     command: yarn run start
