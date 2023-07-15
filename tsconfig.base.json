@@ -19,11 +19,9 @@
     "strict": true,
     "skipLibCheck": true,
     "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "@styled/typescript-styled-plugin"
-      }
-    ]
+    "plugins": [{
+      "name": "next"
+    }]
   },
   "include": [
     "./reset.d.ts"
