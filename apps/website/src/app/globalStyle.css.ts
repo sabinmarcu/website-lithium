@@ -1,5 +1,5 @@
 import { globalStyle } from '@vanilla-extract/css'
-import { theme } from '@ws/theme'
+import { style, theme } from '@ws/theme'
 
 globalStyle('body', {
   display: 'flex',

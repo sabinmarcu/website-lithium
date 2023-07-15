@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css'
+import { style } from '@ws/theme'
 import { theme } from '@ws/theme'
 
 export const footer = style({
@@ -27,7 +27,7 @@ export const details = style({
   flexDirection: 'column',
   gap: '12px',
   fontSize: 'inherit',
-  color: theme.colors.text.main,
+  color: theme.colors.primary.main,
   margin: 'auto',
 })
 
