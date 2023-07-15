@@ -19,13 +19,14 @@ let themeCssImported = false;
 
 /** @type { import('@storybook/react').Decorator } */
 const withThemeProvider = (Story, context) => {
-  const body = document.body; 
+  const body = document.body;
   useTheme(body, context.globals.theme);
-  useEffect(() => { 
+  useEffect(() => {
     if (!themeCssImported) {
       import('./theme.css')
       themeCssImported = true;
-  } }, []);
+    }
+  }, []);
   return (
     <Story {...context} />
   )

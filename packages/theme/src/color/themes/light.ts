@@ -1,20 +1,10 @@
+import { generateTheme } from './generator';
 import type { ColorsContract } from '../contract';
+import { toHsl } from '../core/utils';
 
-const colors = {
-  main: 'red',
-  lighter: 'red',
-  darker: 'red',
-};
-
-export const lightColors = {
-  primary: colors,
-  secondary: colors,
-  text: {
-    main: 'black',
-    contrast: '#ccc',
-  },
-  background: {
-    main: 'white',
-    paper: '#aaa',
-  },
-} satisfies ColorsContract;
+export const lightColors = generateTheme({
+  primary: toHsl('hsl(210, 79%, 46%)'),
+  secondary: toHsl('hsl(291, 64%, 42%)'),
+  text: toHsl('hsl(0, 0%, 0%)'),
+  background: toHsl('hsl(0, 0%, 90%)'),
+}) satisfies ColorsContract;

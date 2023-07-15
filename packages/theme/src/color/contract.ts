@@ -1,22 +1,10 @@
 import { createGlobalThemeContract } from '@vanilla-extract/css';
 import type { Simplify } from 'type-fest';
+import { getThemeGeneratorContract } from './core/utils';
+import { themeGenerator } from './core/generator';
+import type { ContractOfThemeGenerator } from './core';
 
 export type Primitive = string | boolean | number | null | undefined;
-export type MapLeafNodesToTreePath<
-  Input,
-  Separator extends string = '-',
-  Previous extends string = Separator,
-> = {
-  [Property in keyof Input]: Input[Property] extends Primitive
-    ? `${Previous}${Separator}${Property & string}`
-    : Input[Property] extends Record<string | number, any>
-      ? MapLeafNodesToTreePath<
-        Input[Property],
-        Separator,
-        `${Previous}${Separator}${Property & string}`
-      >
-      : never;
-};
 
 export type MapLeafNodes<
   Input,
@@ -29,29 +17,10 @@ export type MapLeafNodes<
       : never;
 };
 
-const colorContract = {
-  main: null,
-  lighter: null,
-  darker: null,
-};
-
-export const rawColorsContract = {
-  primary: colorContract,
-  secondary: colorContract,
-  text: {
-    main: null,
-    contrast: null,
-  },
-  background: {
-    main: null,
-    paper: null,
-  },
-};
-
 export const colorsContract = createGlobalThemeContract(
-  rawColorsContract,
-  (_, path) => path.join('-'),
+  getThemeGeneratorContract(themeGenerator),
+  (_, path) => ['palette', ...path].join('-'),
 );
 
 export type ColorsContract = Simplify<MapLeafNodes<typeof colorsContract, string>>;
-export type Colors = Simplify<MapLeafNodesToTreePath<typeof colorsContract, '-'>>;
+export type Colors = Simplify<ContractOfThemeGenerator<typeof themeGenerator, string>>;
