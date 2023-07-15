@@ -13,7 +13,6 @@ import {
 export const generateTextPalette = {
   main: (color: HSLColor) => color,
   contrast: (color: HSLColor) => {
-    console.log({ color });
     const hsl = parseToHsl(color);
     const { lightness } = hsl;
     return lightness > 0.5 ? black : white;
