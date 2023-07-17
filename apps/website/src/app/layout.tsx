@@ -1,6 +1,9 @@
 import { Background } from '@ws/background';
 import './globalStyle.css';
-import { render } from '@ws/theme';
+import {
+  layersOrder,
+  render,
+} from '@ws/theme';
 
 render();
 
@@ -23,6 +26,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
+        <style id="css-layers-reset">
+          {layersOrder.map((it) => `@layer ${it};`).join(' ')}
+        </style>
         <Background />
         {children}
       </body>
