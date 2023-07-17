@@ -19,7 +19,7 @@ const projects = package_.workspaces.map(
 ).filter(Boolean);
 
 const coverageCollection = package_.workspaces
-  .filter(it => it.startsWith('packages'))
+  .filter((it) => it.startsWith('packages'))
   .map(
     (workspace) => `<rootDir>/${workspace}/src/**/!(*.css|*.stories|*type.spec).{ts,tsx}`,
   );
